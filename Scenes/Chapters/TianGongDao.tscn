@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bcepwq66lmkx8"]
+
+[ext_resource type="PackedScene" uid="uid://pfn1yb7pjesy" path="res://Scenes/Entities/Roles/TangSeng/TangSeng.tscn" id="1_cdteh"]
+[ext_resource type="Texture2D" uid="uid://dmsnji1k0y0b0" path="res://Arts/Image/Level/Map_3/Level_1_3/FristBG.png" id="1_evnmu"]
+[ext_resource type="Texture2D" uid="uid://ckwdv830ghdbn" path="res://Arts/Image/Level/Map_3/Level_1_3/BG6.png" id="2_cdteh"]
+[ext_resource type="Texture2D" uid="uid://cdopg012ypyc2" path="res://Arts/Image/Level/Map_3/Level_1_3/floor2.png" id="3_w8c77"]
+
+[node name="TianGongDao" type="Node2D" unique_id=247066535]
+
+[node name="Role" type="Node" parent="." unique_id=1111644087]
+
+[node name="TangSeng" parent="Role" unique_id=346038323 instance=ExtResource("1_cdteh")]
+position = Vector2(55, 559)
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=880580599]
+repeat_size = Vector2(1, 1)
+
+[node name="First" type="Sprite2D" parent="Parallax2D" unique_id=1196638695]
+position = Vector2(637, 305)
+texture = ExtResource("1_evnmu")
+
+[node name="Second" type="Sprite2D" parent="." unique_id=554561140]
+position = Vector2(2386, 335)
+texture = ExtResource("2_cdteh")
+
+[node name="Floor" type="Node2D" parent="." unique_id=1335069497]
+
+[node name="Floor1" type="Sprite2D" parent="Floor" unique_id=1539640749]
+position = Vector2(566, 591)
+texture = ExtResource("3_w8c77")
+
+[node name="Floor2" type="Sprite2D" parent="Floor" unique_id=1661151524]
+position = Vector2(1698, 591)
+texture = ExtResource("3_w8c77")
+
+[node name="Floor3" type="Sprite2D" parent="Floor" unique_id=686701256]
+position = Vector2(2830, 591)
+texture = ExtResource("3_w8c77")
+
+[node name="Floor4" type="Sprite2D" parent="Floor" unique_id=1794993355]
+position = Vector2(3962, 591)
+texture = ExtResource("3_w8c77")
