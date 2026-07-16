@@ -104,6 +104,18 @@ region = Rect2(400, 1400, 200, 200)
 atlas = ExtResource("2_ha7n1")
 region = Rect2(600, 1400, 200, 200)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hu7a"]
+atlas = ExtResource("2_ha7n1")
+region = Rect2(0, 2200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_714kf"]
+atlas = ExtResource("2_ha7n1")
+region = Rect2(200, 2200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p06wu"]
+atlas = ExtResource("2_ha7n1")
+region = Rect2(400, 2200, 200, 200)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_dom6q"]
 animations = [{
 "frames": [{
@@ -230,6 +242,20 @@ animations = [{
 "loop": 1,
 "name": &"skill_1_holy_light_orb",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hu7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_714kf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p06wu")
+}],
+"loop": 1,
+"name": &"skill_2_rain_of_renewal",
+"speed": 5.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urhn1"]
@@ -327,6 +353,18 @@ region = Rect2(400, 1400, 200, 200)
 [sub_resource type="AtlasTexture" id="AtlasTexture_52841"]
 atlas = ExtResource("3_7udrh")
 region = Rect2(600, 1400, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd546"]
+atlas = ExtResource("3_7udrh")
+region = Rect2(0, 2200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttrj8"]
+atlas = ExtResource("3_7udrh")
+region = Rect2(200, 2200, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_35wjw"]
+atlas = ExtResource("3_7udrh")
+region = Rect2(400, 2200, 200, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jfm15"]
 animations = [{
@@ -440,6 +478,20 @@ animations = [{
 }],
 "loop": 1,
 "name": &"skill_1_holy_light_orb",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd546")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttrj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_35wjw")
+}],
+"loop": 1,
+"name": &"skill_2_rain_of_renewal",
 "speed": 5.0
 }]
 
@@ -870,6 +922,59 @@ tracks/3/keys = {
 "values": [1, 0, 1, 2, 3]
 }
 
+[sub_resource type="Animation" id="Animation_xolwf"]
+resource_name = "skill_2_rain_of_renewal"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Move_X/Body:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"skill_2_rain_of_renewal"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Move_X/Body:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Move_X/Body/Weapon:animation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"skill_2_rain_of_renewal"]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Move_X/Body/Weapon:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gps4l"]
 _data = {
 &"RESET": SubResource("Animation_sth6c"),
@@ -879,7 +984,8 @@ _data = {
 &"idle": SubResource("Animation_jfm15"),
 &"jump": SubResource("Animation_ip8ib"),
 &"run": SubResource("Animation_25fds"),
-&"skill_1_holy_light_orb": SubResource("Animation_8hu7a")
+&"skill_1_holy_light_orb": SubResource("Animation_8hu7a"),
+&"skill_2_rain_of_renewal": SubResource("Animation_xolwf")
 }
 
 [node name="TangSeng" type="CharacterBody2D" unique_id=346038323]
